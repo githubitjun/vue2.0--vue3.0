@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+        <div id="app" style="color: red;background:blue" >
+                <p>{{name}}</p>
+                <span>{{age}}</span>
+                <ul>
+                    <li>{{name}}</li>
+                    <li>{{age}}</li>
+                </ul>
+            </div>
+    <script src="/dist/und/vue.js"></script>
+
+    <script>
+        let app = new Vue({
+            el:"#app",
+            data() {
+                return {name:'zf',age:11}
+            },
+            methods: {
+                
+            },
+            beforeCreate(){
+                console.log('beforeCreate')
+            },
+            created() {
+                console.log(this.name)
+            },
+            mounted(){
+                console.log(this)
+            }
+        })
+    
+    </script>
+</body>
+
+</html>
